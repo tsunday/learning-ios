@@ -92,3 +92,14 @@ extension NetworkCommunicator: ErrorHandlingCommunicator {
 let safeNetCom = NetworkCommunicator()
 safeNetCom.sendSafeMessage(address: "local")
 safeNetCom.sendSafeMessage(address: "public")
+
+
+func noIdea<Something>(_ input: Something, reps: Int) -> [Something] {
+    var output: [Something] = []
+    for _ in 0..<reps {
+        output.append(input)
+    }
+    return output
+}
+
+noIdea("input", reps: 3)
