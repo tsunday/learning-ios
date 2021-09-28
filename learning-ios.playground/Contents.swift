@@ -103,3 +103,14 @@ func noIdea<Something>(_ input: Something, reps: Int) -> [Something] {
 }
 
 noIdea("input", reps: 3)
+
+var potential: String? = "test"
+
+// Accessing optional values with !
+print(potential!)
+
+var implicitPotential: String! = "test"
+print(potential!)
+
+assert(potential != nil, "optional value is missing")
+precondition(implicitPotential != nil)
